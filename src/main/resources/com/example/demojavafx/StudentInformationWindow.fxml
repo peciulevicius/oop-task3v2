@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="375.0" prefHeight="558.0" prefWidth="601.0" style="-fx-background-color: #444444; -fx-min-height: 420; -fx-min-width: 600;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.StudentInformationController">
+   <children>
+      <Button fx:id="closeButton" layoutX="438.0" layoutY="498.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="32.0" prefWidth="133.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Close">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Separator layoutX="18.0" layoutY="478.0" prefHeight="1.0" prefWidth="565.0" />
+      <Text fill="WHITE" layoutX="33.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="276.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="groupNameDisplay" layoutX="160.0" layoutY="102.0" text="Group Name" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="studentNameDisplay" layoutX="180.0" layoutY="57.0" prefHeight="32.0" prefWidth="191.0" text="-" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="36.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student name:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="semesterDisplay" layoutX="373.0" layoutY="102.0" prefHeight="20.0" prefWidth="41.0" text="-" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="studentAverageOutput" layoutX="193.0" layoutY="438.0" prefHeight="21.0" prefWidth="38.0" text="-.--" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut6" layoutX="347.0" layoutY="379.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut5" layoutX="348.0" layoutY="332.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut3" layoutX="348.0" layoutY="230.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut4" layoutX="350.0" layoutY="283.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut2" layoutX="349.0" layoutY="190.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectGradeOut1" layoutX="351.0" layoutY="152.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectNameOut6" layoutX="154.0" layoutY="376.0" text="SubjectName" textFill="WHITE" />
+      <Label fx:id="subjectNameOut5" layoutX="154.0" layoutY="333.0" text="SubjectName" textFill="WHITE" />
+      <Label fx:id="subjectNameOut3" layoutX="158.0" layoutY="232.0" text="SubjectName" textFill="WHITE" />
+      <Label fx:id="subjectNameOut4" layoutX="154.0" layoutY="282.0" text="SubjectName" textFill="WHITE" />
+      <Label fx:id="subjectNameOut2" layoutX="158.0" layoutY="191.0" text="SubjectName" textFill="WHITE" />
+      <Label fx:id="subjectNameOut1" layoutX="158.0" layoutY="151.0" text="SubjectName" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="34.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #1:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="35.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #2:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="35.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #3:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="35.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #4:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="32.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #5:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="33.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #6:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="275.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="276.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="275.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="277.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="278.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="278.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="184.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student information:" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="41.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student average:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Separator layoutX="36.0" layoutY="424.0" prefHeight="6.0" prefWidth="339.0" />
+      <Text fill="WHITE" layoutX="431.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="431.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="428.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="425.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="426.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="426.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credits:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="subjectCreditsOut1" layoutX="501.0" layoutY="152.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectCreditsOut2" layoutX="504.0" layoutY="193.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectCreditsOut4" layoutX="505.0" layoutY="286.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectCreditsOut3" layoutX="503.0" layoutY="233.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectCreditsOut5" layoutX="503.0" layoutY="335.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+      <Label fx:id="subjectCreditsOut6" layoutX="502.0" layoutY="382.0" prefHeight="21.0" prefWidth="56.0" text="-" textFill="WHITE" />
+   </children>
+</AnchorPane>

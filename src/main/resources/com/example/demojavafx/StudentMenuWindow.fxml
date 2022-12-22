@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="375.0" minWidth="582.0" prefHeight="578.0" prefWidth="878.0" style="-fx-background-color: #444444; -fx-min-height: 420; -fx-min-width: 600;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.StudentMenuController">
+   <children>
+      <Separator layoutX="36.0" layoutY="495.0" prefHeight="6.0" prefWidth="817.0" />
+      <TextField fx:id="studentNameInput" layoutX="180.0" layoutY="357.0" prefHeight="31.0" prefWidth="146.0" promptText="Džiugas" />
+      <Button fx:id="addStudentButton" layoutX="336.0" layoutY="398.0" mnemonicParsing="false" onAction="#addStudentAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="Add Student">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="addStudentGradesButton" layoutX="178.0" layoutY="443.0" mnemonicParsing="false" onAction="#addStudentGradesAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="Add grades...">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="701.0" layoutY="514.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Close">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteStudentButton" layoutX="335.0" layoutY="356.0" mnemonicParsing="false" onAction="#deleteStudentAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Delete Student">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="studentTable" layoutX="19.0" layoutY="14.0" prefHeight="335.0" prefWidth="465.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="217.5" text="Name" />
+          <TableColumn fx:id="surnameColumn" prefWidth="246.5" text="Surname" />
+        </columns>
+      </TableView>
+      <TextField fx:id="studentSurnameInput" layoutX="179.0" layoutY="399.0" prefHeight="31.0" prefWidth="146.0" promptText="Pečiulevičius" />
+      <Text fill="WHITE" layoutX="19.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="15.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student surname:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Separator layoutX="515.0" layoutY="11.0" opacity="0.51" orientation="VERTICAL" prefHeight="477.0" prefWidth="0.0" style="-fx-background-color: #e8e8e8;" />
+      <Separator layoutX="536.0" layoutY="327.0" prefHeight="2.0" prefWidth="310.0" />
+      <Text fill="WHITE" layoutX="540.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group average:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="540.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group TOP3:">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="showStudentInformationButton" layoutX="337.0" layoutY="442.0" mnemonicParsing="false" onAction="#showStudentInformationAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #006400;" text="Show student...">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="groupAverageOutput" layoutX="680.0" layoutY="339.0" prefHeight="21.0" prefWidth="38.0" text="-.--" textFill="WHITE" />
+      <Button fx:id="refreshWindowButton" layoutX="535.0" layoutY="514.0" mnemonicParsing="false" onAction="#refreshWindowAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="Refresh window">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="semesterDisplay" layoutX="650.0" layoutY="88.0" prefHeight="20.0" prefWidth="41.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="groupNameDisplay" layoutX="650.0" layoutY="56.0" text="Group Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="545.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="545.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group name:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="602.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group information:" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="547.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #6:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="544.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #5:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="545.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #4:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="545.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #3:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="549.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #2:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="547.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #1:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="subjectNameOut1" layoutX="645.0" layoutY="119.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut2" layoutX="646.0" layoutY="155.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut4" layoutX="645.0" layoutY="218.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut3" layoutX="646.0" layoutY="188.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut5" layoutX="644.0" layoutY="259.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut6" layoutX="644.0" layoutY="293.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

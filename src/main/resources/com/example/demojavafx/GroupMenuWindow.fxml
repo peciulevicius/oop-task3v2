@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="375.0" minWidth="582.0" prefHeight="578.0" prefWidth="729.0" style="-fx-background-color: #444444; -fx-min-height: 420; -fx-min-width: 600;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.GroupMenuController">
+   <children>
+      <Text fill="WHITE" layoutX="144.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a group or create a new one." underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Separator layoutX="36.0" layoutY="495.0" prefHeight="6.0" prefWidth="657.0" />
+      <TableView fx:id="groupTable" layoutX="45.0" layoutY="74.0" prefHeight="349.0" prefWidth="640.0">
+        <columns>
+          <TableColumn fx:id="groupColumn" prefWidth="639.0" text="Group" />
+        </columns>
+      </TableView>
+      <TextField fx:id="groupNameInput" layoutX="45.0" layoutY="446.0" prefHeight="31.0" prefWidth="146.0" promptText="PI18E" />
+      <Button fx:id="addGroupButton" layoutX="208.0" layoutY="445.0" mnemonicParsing="false" onAction="#openAddGroupAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="Add">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="seeSelectedGroupButton" layoutX="373.0" layoutY="445.0" mnemonicParsing="false" onAction="#seeSelectedGroupAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="See selected...">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="534.0" layoutY="520.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Close">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteGroupButton" layoutX="534.0" layoutY="445.0" mnemonicParsing="false" onAction="#deleteGroupAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Delete Selected">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

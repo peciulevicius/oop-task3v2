@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="375.0" prefHeight="558.0" prefWidth="601.0" style="-fx-background-color: #444444; -fx-min-height: 420; -fx-min-width: 600;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demojavafx.StudentGradesController">
+   <children>
+      <Button fx:id="closeButton" layoutX="438.0" layoutY="498.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="32.0" prefWidth="133.0" style="-fx-border-color: #000; -fx-background-radius: 4; -fx-text-fill: #FFFFFF; -fx-background-color: #AB4642;" text="Close">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="111.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add grades for the selected student">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Separator layoutX="18.0" layoutY="478.0" prefHeight="1.0" prefWidth="565.0" />
+      <Button fx:id="addGradesButton" layoutX="213.0" layoutY="498.0" mnemonicParsing="false" onAction="#addGradesAction" prefHeight="33.0" prefWidth="175.0" style="-fx-border-color: black; -fx-background-radius: 4; -fx-text-fill: #FFF; -fx-background-color: #7cafc2;" text="Add Grades">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="34.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #1:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #2:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #3:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #4:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #5:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="44.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject #6:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="354.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="subjectGrade1" layoutX="453.0" layoutY="148.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <TextField fx:id="subjectGrade2" layoutX="453.0" layoutY="197.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <TextField fx:id="subjectGrade3" layoutX="453.0" layoutY="249.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <TextField fx:id="subjectGrade4" layoutX="453.0" layoutY="308.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <TextField fx:id="subjectGrade5" layoutX="453.0" layoutY="365.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <TextField fx:id="subjectGrade6" layoutX="453.0" layoutY="423.0" prefHeight="31.0" prefWidth="114.0" promptText="1-10" />
+      <Label fx:id="groupNameDisplay" layoutX="173.0" layoutY="104.0" text="Group Name" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut6" layoutX="173.0" layoutY="423.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut5" layoutX="174.0" layoutY="366.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut3" layoutX="174.0" layoutY="256.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut4" layoutX="176.0" layoutY="309.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut2" layoutX="175.0" layoutY="198.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="subjectNameOut1" layoutX="174.0" layoutY="150.0" text="SubjectName" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="studentNameDisplay" layoutX="173.0" layoutY="58.0" prefHeight="30.0" prefWidth="395.0" text="Student name" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="27.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student name:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="semesterDisplay" layoutX="453.0" layoutY="102.0" text="Semester" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
